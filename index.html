@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="left">
+        <img src="./asset/TestLogo.svg" alt="logo" width="70%" />
+      </div>
+      <div class="items">
+        <div class="item-content item-active">
+          <img
+            src="./asset/icon/home_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="img"
+          />
+          <p>Overview</p>
+        </div>
+        <div class="item-content">
+          <img
+            src="./asset/icon/group_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="img"
+          />
+          <p>Patients</p>
+        </div>
+        <div class="item-content">
+          <img
+            src="./asset/icon/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="img"
+          />
+          <p>Schedule</p>
+        </div>
+        <div class="item-content">
+          <img
+            src="./asset/icon/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="img"
+          />
+          <p>Message</p>
+        </div>
+        <div class="item-content">
+          <img
+            src="./asset/icon/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
+            alt="img"
+          />
+          <p>Transactions</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="p-img">
+          <img
+            src="./asset/icon/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.png"
+            alt="img"
+          />
+        </div>
+        <div class="p-data">
+          <h1>Dr. Jose Simmons</h1>
+          <p>General Practitioner</p>
+        </div>
+        <p>|</p>
+        <div class="p-set">
+          <img
+            class="set"
+            src="./asset/icon/settings_FILL0_wght300_GRAD0_opsz24@2x.png"
+            alt="set"
+          />
+          <img
+            class="dot"
+            src="./asset/icon/more_vert_FILL0_wght300_GRAD0_opsz24@2x.png"
+            alt="dot"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="grid-container">
+        <div class="grid-item sidebar">
+          <div class="head">
+            <h2>Patients</h2>
+            <img
+              src="./asset/icon/search_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="search"
+            />
+          </div>
+          <ul class="patient-list">
+            <li>
+              <div class="chat-list">
+                <img
+                  class="p-pic"
+                  src="https://via.placeholder.com/40"
+                  alt="Emily Williams"
+                />
+                <div class="name">Emily Williams<br />Female, 18</div>
+              </div>
+              <img
+                src="./asset/icon/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="dot"
+              />
+            </li>
+            <li>
+              <div class="chat-list">
+                <img
+                  class="p-pic"
+                  src="https://via.placeholder.com/40"
+                  alt="Emily Williams"
+                />
+                <div class="name">Emily Williams<br />Female, 18</div>
+              </div>
+              <img
+                src="./asset/icon/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="dot"
+              />
+            </li>
+            <li>
+              <div class="chat-list">
+                <img
+                  class="p-pic"
+                  src="https://via.placeholder.com/40"
+                  alt="Emily Williams"
+                />
+                <div class="name">Emily Williams<br />Female, 18</div>
+              </div>
+              <img
+                src="./asset/icon/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="dot"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="grid-item item2">
+          <div class="diagnosis-container">
+            <div class="section-title">Diagnosis History</div>
+            <div class="chart-container" style="display: flex">
+              <div style="width: 65%">
+                <div class="header">
+                  <h2>Blood Pressure</h2>
+                  <div class="time-range">
+                    Last 6 months
+                    <img
+                      src="./asset/icon/expand_more_FILL0_wght300_GRAD0_opsz24@2x.png"
+                      alt="expand-more-icon"
+                    />
+                  </div>
+                </div>
+                <div class="chart">
+                  <canvas id="bpChart"></canvas>
+                </div>
+              </div>
+              <ul class="data">
+                <li class="systolic">
+                  <span class="label"
+                    ><div class="dot-systolic"></div>
+                    Systolic</span
+                  >
+                  <span class="value">160</span>
+                  <span class="status">Higher than Average</span>
+                </li>
+                <hr />
+                <li class="diastolic">
+                  <span class="label"
+                    ><div class="dot-diastolic"></div>
+                    Diastolic</span
+                  >
+                  <span class="value">78</span>
+                  <span class="status">Lower than Average</span>
+                </li>
+              </ul>
+            </div>
+            <div class="metrics">
+              <div class="metric-card" style="background-color: #e0f7fa">
+                <img src="./asset/icon/respiratory rate.svg" alt="Heart Rate" />
+                <div class="metric-data">Respiratory Rate</div>
+                <div class="metric-value">20 bpm</div>
+                <div class="metric-status">Normal</div>
+              </div>
+              <div class="metric-card" style="background-color: #ffe0e0">
+                <img src="./asset/icon/temperature.svg" alt="Temperature" />
+                <div class="metric-data">Temperature</div>
+                <div class="metric-value">98.6°F</div>
+                <div class="metric-status">Normal</div>
+              </div>
+              <div class="metric-card" style="background-color: #ffebee">
+                <img src="./asset/icon/HeartBPM.svg" alt="Respiratory Rate" />
+                <div class="metric-data">Heart Rate</div>
+                <div class="metric-value">78 bpm</div>
+                <div class="metric-status">Lower than Average</div>
+              </div>
+            </div>
+          </div>
+          <div class="diagnostic-List">
+            <h2>Diagnostic List</h2>
+            <div class="table-head">
+              <div style="width: 50%; padding-inline: 3px">
+                Problem/Diagnosis
+              </div>
+              <div style="width: 100%; padding-inline: 10px">Description</div>
+              <div style="width: 50%; padding-inline: 10px">Status</div>
+            </div>
+            <table class="diagnostic-table">
+              <!-- <thead>
+                <tr class="tr-head">
+                  <th>Problem/Diagnosis</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                </tr>
+              </thead> -->
+              <tbody>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+                <tr>
+                  <td style="width: 50%">Hypertension</td>
+                  <td style="width: 100%">Chronic high blood pressure</td>
+                  <td style="width: 50%">Under Observation</td>
+                </tr>
+
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="grid-item item3">
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="./asset/icon/Layer 2@2x.png" alt="Jessica Taylor" />
+            </div>
+            <h2>Jessica Taylor</h2>
+            <div class="profile-details">
+              <div class="detail-item">
+                <img src="./asset/icon/BirthIcon.svg" alt="icon" />
+                <div>
+                  <p class="p-title">Date Of Birth</p>
+                  <p><strong>August 23, 1996</strong></p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <img src="./asset/icon/FemaleIcon.svg" alt="female-icon" />
+                <div>
+                  <p class="p-title">Gender</p>
+                  <p><strong>Female</strong></p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <img src="./asset/icon/PhoneIcon.svg" alt="PhoneIcon" />
+                <div>
+                  <p class="p-title">Contact Info.</p>
+                  <p><strong>(415) 555-1234</strong></p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <img src="./asset/icon/PhoneIcon.svg" alt="PhoneIcon" />
+                <div>
+                  <p class="p-title">Emergency Contacts</p>
+                  <p><strong>(415) 555-5678</strong></p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <img src="./asset/icon/InsuranceIcon.svg" alt="InsuranceIcon" />
+                <div>
+                  <p class="p-title">Insurance Provider</p>
+                  <p><strong>Sunrise Health Assurance</strong></p>
+                </div>
+              </div>
+            </div>
+            <button class="show-info-button">Show All Information</button>
+          </div>
+          <div class="lab-results-container">
+            <h2>Lab Results</h2>
+            <ul class="lab-results-list">
+              <li class="lab-result-item">
+                <span>Blood Tests</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>Blood Tests</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>Blood Tests</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>Blood Tests</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>CT Scans</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>Radiology Reports</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>X-Rays</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+              <li class="lab-result-item">
+                <span>Urine Test</span>
+                <img
+                  src="./asset/icon/download_FILL0_wght300_GRAD0_opsz24 (1)@2x.png"
+                  alt="download-icon"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
